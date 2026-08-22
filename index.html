@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SJR App Development — Apps von Sebastian Römke</title>
-<meta name="description" content="Apps von Sebastian Römke. Bürofauna: der satirische Tracker für deine Meetings.">
+<title>Bürofauna — SJR App Development</title>
+<meta name="description" content="Bürofauna: der satirische Tracker für deine Meetings. Eine App von SJR App Development.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <link rel="stylesheet" href="stil.css">
@@ -12,23 +12,21 @@
 <body>
 <main>
 
-<header>
-  <div class="rubrik">SJR App Development</div>
-  <h1>Apps aus Hannover</h1>
-</header>
-
-<p class="einleitung">Kleine, sorgfältig gemachte Apps für Android. Ohne Konto,
-ohne Cloud, ohne Datensammeln — was du erfasst, bleibt auf deinem Gerät.</p>
-
 <!-- ====================================================================
      Ein Block je App. Für eine weitere App diesen ganzen <article> kopieren
-     und die Inhalte tauschen: Banner, Titel, Text, Screenshots, Links.
+     und die Inhalte tauschen: Titel, Unterzeile, Banner, Text, Screenshots,
+     Links. Kommt die zweite App dazu, wandert die Überschrift des Blocks von
+     <h1> auf <h2> und die Seite bekommt darüber wieder einen eigenen Titel —
+     zwei <h1> auf einer Seite wären für Vorleseprogramme irreführend.
      ==================================================================== -->
 <article class="app">
-  <img class="banner" src="bilder/banner.png" alt="Bürofauna" width="1024" height="500">
+  <header>
+    <div class="rubrik">SJR App Development</div>
+    <h1>Bürofauna</h1>
+    <p class="unterzeile">Der satirische Tracker für deine Meetings</p>
+  </header>
 
-  <h2>Bürofauna</h2>
-  <p class="unterzeile">Der satirische Tracker für deine Meetings</p>
+  <img class="banner" src="bilder/banner.png" alt="Bürofauna" width="1024" height="500">
 
   <p>Zwischen „Nur ganz kurz“ und „Das nehmen wir mit“ lebt eine erstaunliche
   Fauna. Bürofauna erfasst deine Meetings und Telefonate, lässt dich jedes mit
@@ -37,7 +35,9 @@ ohne Cloud, ohne Datensammeln — was du erfasst, bleibt auf deinem Gerät.</p>
   Naturkundebuchs, mit Steckbrief, Ruflauten und ernst gemeinten
   Umgangsstrategien.</p>
 
-  <p>Karikiert wird ausschließlich Verhalten in Gesprächen — nie Menschen.</p>
+  <p>Karikiert wird ausschließlich Verhalten in Gesprächen — nie Menschen. Alle
+  Aufzeichnungen bleiben auf dem Gerät: kein Konto, keine Anmeldung, keine
+  Cloud.</p>
 
   <div class="schuesse">
     <img src="bilder/schuss-1.png" alt="Startbildschirm mit Kompass zum Starten einer Expedition" width="380" height="836" loading="lazy">
@@ -48,7 +48,6 @@ ohne Cloud, ohne Datensammeln — was du erfasst, bleibt auf deinem Gerät.</p>
   <ul class="links">
     <li><span class="bald">Demnächst im Google Play Store</span></li>
     <li><a href="https://tyndor.github.io/buerofauna-legal/datenschutz.html">Datenschutzerklärung der App</a></li>
-    <li><a href="mailto:sjr.app.development@gmail.com">Support: sjr.app.development@gmail.com</a></li>
   </ul>
 </article>
 

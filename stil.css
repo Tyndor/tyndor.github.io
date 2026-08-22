@@ -94,10 +94,13 @@ nav a { margin-right: 18px; }
   border-radius: 10px;
 }
 
-.app h2 { margin: 22px 0 2px; }
+.app h1, .app h2 { margin: 6px 0 2px; }
+
+/* Der Block traegt seine eigene Kopfzeile; der Rahmen darum entfaellt. */
+.app header { border-bottom: none; padding-bottom: 0; margin-bottom: 18px; }
 
 .unterzeile {
-  margin: 0 0 16px;
+  margin: 0;
   font-family: ui-monospace, "Courier New", monospace;
   font-size: 13px;
   letter-spacing: 0.08em;
