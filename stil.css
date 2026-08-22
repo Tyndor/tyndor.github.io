@@ -20,6 +20,16 @@ body {
   line-height: 1.65;
 }
 
+/* Blocksatz mit Silbentrennung. Ohne die Trennung riss der schmale Satzspiegel
+   auf dem Telefon Loecher zwischen die Woerter. */
+p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.unterzeile, .stand, .punkte, footer { text-align: left; hyphens: manual; }
+
 main { max-width: 44rem; margin: 0 auto; }
 
 header { border-bottom: 1px solid var(--rule); padding-bottom: 14px; margin-bottom: 28px; }
@@ -108,22 +118,59 @@ nav a { margin-right: 18px; }
   color: var(--ink-muted);
 }
 
-/* Waagerecht scrollbar statt gestaucht: Auf schmalen Geräten bleiben die
-   Bildschirmfotos lesbar gross. */
+/* Karussell ohne Skript. Der Streifen scrollt waagerecht und rastet an den
+   Bildern ein; das naechste lugt bewusst herein, damit man sieht, dass es
+   weitergeht. Sanftes Scrollen macht die Sprungmarken darunter zur Blaetter-
+   Bedienung. Wer Bewegung reduziert hat, bekommt harte Spruenge statt Gleiten. */
 .schuesse {
   display: flex;
   gap: 14px;
-  margin: 22px 0;
+  margin: 22px 0 10px;
   overflow-x: auto;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
 }
 
 .schuesse img {
   flex: 0 0 auto;
-  width: 190px;
+  width: 210px;
   height: auto;
   border: 1px solid var(--rule);
   border-radius: 10px;
+  scroll-snap-align: center;
+}
+
+/* Sprungmarken als Blaetter-Bedienung. Keine echten Knoepfe, damit die Seite
+   ohne JavaScript auskommt — Tastatur und Vorleseprogramme kommen mit Links
+   trotzdem zurecht. */
+.punkte {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.punkte a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--ink-muted);
+}
+
+.punkte a:hover, .punkte a:focus { border-color: var(--seal); color: var(--seal); }
+
+@media (prefers-reduced-motion: reduce) {
+  .schuesse { scroll-behavior: auto; }
 }
 
 .links { list-style: none; padding: 0; margin: 18px 0 0; }
