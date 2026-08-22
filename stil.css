@@ -1,0 +1,139 @@
+/* Schlichtes Papier-Layout, passend zum Feldführer-Ton der App.
+   Keine externen Schriften und keine Skripte — die Seite lädt nichts nach. */
+:root {
+  --paper: #f7f2e4;
+  --ink: #2b241c;
+  --ink-muted: #5d5344;
+  --rule: #d6c9ae;
+  --seal: #8c3b2e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 32px 20px 64px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+main { max-width: 44rem; margin: 0 auto; }
+
+header { border-bottom: 1px solid var(--rule); padding-bottom: 14px; margin-bottom: 28px; }
+
+.rubrik {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 0; }
+h2 { font-size: 20px; margin: 34px 0 10px; }
+
+a { color: var(--seal); }
+
+address {
+  font-style: normal;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 15px;
+  background: #efe7d3;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 14px 16px;
+  white-space: pre-line;
+}
+
+.platzhalter {
+  background: #f6e2b8;
+  border-bottom: 2px dotted var(--seal);
+  padding: 0 3px;
+}
+
+.stand { font-family: ui-monospace, "Courier New", monospace; font-size: 13px; color: var(--ink-muted); }
+
+footer {
+  margin-top: 48px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+nav a { margin-right: 18px; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #191510; --ink: #ece3d2; --ink-muted: #b3a894; --rule: #4a4132; --seal: #d98878; }
+  address { background: #221c15; }
+  .platzhalter { background: #4a3a18; }
+}
+
+/* --- Übersicht der Apps -------------------------------------------------
+   Je App ein .app-Block. Alles fliesst; feste Höhen gibt es nicht, damit
+   grosse Schriftgrade und schmale Fenster nichts abschneiden. */
+
+.einleitung { color: var(--ink-muted); }
+
+.app {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+
+.app:first-of-type { border-top: none; }
+
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+
+.app h2 { margin: 22px 0 2px; }
+
+.unterzeile {
+  margin: 0 0 16px;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* Waagerecht scrollbar statt gestaucht: Auf schmalen Geräten bleiben die
+   Bildschirmfotos lesbar gross. */
+.schuesse {
+  display: flex;
+  gap: 14px;
+  margin: 22px 0;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.schuesse img {
+  flex: 0 0 auto;
+  width: 190px;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+
+.links { list-style: none; padding: 0; margin: 18px 0 0; }
+.links li { margin-bottom: 6px; }
+
+.bald {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border: 1px dashed var(--rule);
+  border-radius: 999px;
+  padding: 3px 12px;
+  display: inline-block;
+}
