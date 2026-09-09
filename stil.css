@@ -176,6 +176,15 @@ nav a { margin-right: 18px; }
 .links { list-style: none; padding: 0; margin: 18px 0 0; }
 .links li { margin-bottom: 6px; }
 
+/* Der Store-Badge.
+   Googles Vorgaben: mindestens 28 px hoch, ringsum ein Viertel der
+   Badge-Hoehe frei, nicht umfaerben, nicht beschneiden, nichts weglassen.
+   Der Freiraum steckt schon in der Datei (646 x 250 px), deshalb ist die
+   gesetzte Hoehe groesser als das Mindestmass — sichtbar bleiben rund
+   50 px Badge. Die Breite folgt dem Seitenverhaeltnis, damit nichts
+   verzerrt. */
+.badge { display: block; height: 76px; width: auto; }
+
 .bald {
   font-family: ui-monospace, "Courier New", monospace;
   font-size: 13px;
