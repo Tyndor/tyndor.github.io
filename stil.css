@@ -187,7 +187,22 @@ nav a { margin-right: 18px; }
    zwei Drittel. Amazons PNG ist 572 x 168 px und randlos: Da IST alles
    Badge. Bei 60 px gegen 40 px sind beide gleich hoch, und das Polster am
    Amazon-Badge stellt den Freiraum her, den Google in seiner Datei mitgibt.
-   Wer eine Hoehe aendert, aendert die andere im selben Verhaeltnis mit. */
+   Wer eine Hoehe aendert, aendert die andere im selben Verhaeltnis mit.
+
+   **Sie stehen nebeneinander** und brechen erst um, wenn die Spalte zu
+   schmal wird. Ein Abstand dazwischen ist nicht noetig: Beide bringen ihren
+   Freiraum mit — der eine in der Datei, der andere im Polster —, und zwei
+   davon nebeneinander ergeben die 20 px, die zwischen ihnen stehen sollen.
+   Nebenbei sind beide Kaestchen dadurch genau 60 px hoch (40 + 2 x 10) und
+   liegen ohne Zutun auf einer Linie. */
+.stores {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .badge { display: block; width: auto; }
 .badge-play { height: 60px; }
 .badge-amazon { height: 40px; margin: 10px; }
