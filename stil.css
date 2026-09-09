@@ -181,20 +181,26 @@ nav a { margin-right: 18px; }
    Googles Vorgaben dazu: mindestens 28 px Badge-Hoehe, ringsum ein Viertel
    davon frei, und neben anderen Store-Badges nie der kleinere.
 
-   **Die zwei Dateien sind verschieden geschnitten**, und das ist der Grund
-   fuer die zwei Hoehen. Googles PNG ist 646 x 250 px und bringt den
-   Freiraum schon mit — sichtbar ist davon nur der mittlere Streifen, rund
-   zwei Drittel. Amazons PNG ist 572 x 168 px und randlos: Da IST alles
-   Badge. Bei 60 px gegen 40 px sind beide gleich hoch, und das Polster am
-   Amazon-Badge stellt den Freiraum her, den Google in seiner Datei mitgibt.
-   Wer eine Hoehe aendert, aendert die andere im selben Verhaeltnis mit.
+   **Die zwei Hoehen kommen daher, dass die Dateien verschieden viel Rand
+   mitbringen.** Nachgemessen an den Dateien selbst, nicht geschaetzt:
 
-   **Sie stehen nebeneinander** und brechen erst um, wenn die Spalte zu
-   schmal wird. Ein Abstand dazwischen ist nicht noetig: Beide bringen ihren
-   Freiraum mit — der eine in der Datei, der andere im Polster —, und zwei
-   davon nebeneinander ergeben die 20 px, die zwischen ihnen stehen sollen.
-   Nebenbei sind beide Kaestchen dadurch genau 60 px hoch (40 + 2 x 10) und
-   liegen ohne Zutun auf einer Linie. */
+     google-play.png     646 x 250, sichtbar 646 x 192 -> 76,8 %
+                         (29 px durchsichtig oben und unten, seitlich NICHTS)
+     amazon-appstore.png 572 x 168, sichtbar 572 x 168 -> 100 %
+
+   Gleich hoch sind die BADGES, nicht die Dateien: 52 x 0,768 = 40, und
+   Amazon steht direkt auf 40. Wer eine Hoehe aendert, rechnet die andere
+   ueber diese Prozentzahl nach.
+
+   **Der Freiraum kommt aus dem Polster, nicht aus den Dateien.** Googles
+   PNG gibt seitlich gar nichts her und oben wie unten nur 6 px bei dieser
+   Groesse — verlangt sind 10, also ein Viertel der Badge-Hoehe. Das Polster
+   von 10 px an BEIDEN Badges stellt das sicher und legt nebenbei 20 px
+   zwischen die beiden, wenn sie nebeneinander stehen.
+
+   **Nebeneinander**, und sie brechen erst um, wenn die Spalte zu schmal
+   wird. Mittig ausgerichtet, weil die Kaestchen verschieden hoch sind (72
+   gegen 60 px) — die Badges darin liegen dadurch auf einer Linie. */
 .stores {
   list-style: none;
   padding: 0;
@@ -203,9 +209,9 @@ nav a { margin-right: 18px; }
   flex-wrap: wrap;
   align-items: center;
 }
-.badge { display: block; width: auto; }
-.badge-play { height: 60px; }
-.badge-amazon { height: 40px; margin: 10px; }
+.badge { display: block; width: auto; margin: 10px; }
+.badge-play { height: 52px; }
+.badge-amazon { height: 40px; }
 
 .bald {
   font-family: ui-monospace, "Courier New", monospace;
