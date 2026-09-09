@@ -176,14 +176,21 @@ nav a { margin-right: 18px; }
 .links { list-style: none; padding: 0; margin: 18px 0 0; }
 .links li { margin-bottom: 6px; }
 
-/* Der Store-Badge.
-   Googles Vorgaben: mindestens 28 px hoch, ringsum ein Viertel der
-   Badge-Hoehe frei, nicht umfaerben, nicht beschneiden, nichts weglassen.
-   Der Freiraum steckt schon in der Datei (646 x 250 px), deshalb ist die
-   gesetzte Hoehe groesser als das Mindestmass — sichtbar bleiben rund
-   50 px Badge. Die Breite folgt dem Seitenverhaeltnis, damit nichts
-   verzerrt. */
-.badge { display: block; height: 76px; width: auto; }
+/* Die Store-Badges.
+   Beide unveraendert: nicht umfaerben, nicht beschneiden, nichts weglassen.
+   Googles Vorgaben dazu: mindestens 28 px Badge-Hoehe, ringsum ein Viertel
+   davon frei, und neben anderen Store-Badges nie der kleinere.
+
+   **Die zwei Dateien sind verschieden geschnitten**, und das ist der Grund
+   fuer die zwei Hoehen. Googles PNG ist 646 x 250 px und bringt den
+   Freiraum schon mit — sichtbar ist davon nur der mittlere Streifen, rund
+   zwei Drittel. Amazons PNG ist 572 x 168 px und randlos: Da IST alles
+   Badge. Bei 60 px gegen 40 px sind beide gleich hoch, und das Polster am
+   Amazon-Badge stellt den Freiraum her, den Google in seiner Datei mitgibt.
+   Wer eine Hoehe aendert, aendert die andere im selben Verhaeltnis mit. */
+.badge { display: block; width: auto; }
+.badge-play { height: 60px; }
+.badge-amazon { height: 40px; margin: 10px; }
 
 .bald {
   font-family: ui-monospace, "Courier New", monospace;
