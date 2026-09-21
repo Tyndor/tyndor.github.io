@@ -7,8 +7,15 @@ Zweck:
 
 * **Übersicht der Apps** (`index.html`) — je App ein `<article class="app">`
   mit Banner, einem Absatz und einem Verweis. Mehr steht dort nicht.
-* **Eine Seite je App** (`buerofauna.html`) — Text, Bildschirmfotos,
-  Store-Abzeichen, Verweis auf ihre Datenschutzerklärung.
+* **Eine Seite je App** (`buerofauna.html`, `stapelhaus.html`) — Text,
+  Bildschirmfotos, Store-Abzeichen, Verweis auf ihre Datenschutzerklärung.
+
+  **Stapelhaus trägt statt der Abzeichen die Marke „In Arbeit"**
+  (`<span class="bald">`): Die App ist noch nicht veröffentlicht, ein
+  Abzeichen führte ins Leere, und Bildschirmfotos aus einer App, die sich noch
+  ändert, wären am Tag der Veröffentlichung falsch. Ihre
+  Datenschutzerklärung steht trotzdem schon — die muss vor dem ersten
+  Store-Eintrag da sein, nicht danach.
 
   **Bis zum 2026-09-21 war beides dasselbe** (Nutzer-Wunsch): Die Startseite
   WAR die Seite von Bürofauna. Mit der zweiten App wäre daraus eine Seite
@@ -25,6 +32,9 @@ Zweck:
 Keine Build-Schritte, keine Abhängigkeiten: reines HTML und eine CSS-Datei.
 Die Bilder unter `bilder/` sind herunterskalierte Fassungen aus dem
 App-Repository (`store/screenshots/`, `store/feature-grafik-1024x500.png`).
+Je App ein Banner: `banner.png` ist Bürofaunas Vorstellungsgrafik,
+`banner-stapelhaus.png` die von Stapelhaus — unverändert übernommen, denn sie
+ist bereits 1024 × 500 und gilt als fertig geliefert.
 
 Die acht `schuss-*.png` werden nicht von Hand skaliert, sondern im
 App-Repository erzeugt:
