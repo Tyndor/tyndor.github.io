@@ -104,6 +104,11 @@ nav a { margin-right: 18px; }
   border-radius: 10px;
 }
 
+/* In der Übersicht führt das Banner auf die Seite der App. Ein Verweis ist
+   für sich ein Zeilen-Element und stünde sonst als schmaler Streifen im
+   Fluss — mit `block` nimmt er die Breite seines Bildes an. */
+.banner-link { display: block; }
+
 .app h1, .app h2 { margin: 6px 0 2px; }
 
 /* Der Block traegt seine eigene Kopfzeile; der Rahmen darum entfaellt. */

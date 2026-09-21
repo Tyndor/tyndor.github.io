@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bürofauna — SJR App Development</title>
+<meta name="description" content="Bürofauna: der satirische Tracker für deine Meetings. Eine App von SJR App Development.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<main>
+
+<!-- ====================================================================
+     DIE SEITE EINER APP. Bis zum 2026-09-21 war das die Startseite; seither
+     steht dort nur noch die Übersicht, und jede App bekommt ihre eigene Seite
+     (Nutzer-Wunsch). Für eine weitere App diese Datei kopieren, die Inhalte
+     tauschen — Titel, Unterzeile, Banner, Text, Bildschirmfotos, Links — und
+     in `index.html` einen Block dafür anlegen.
+
+     Die Überschrift bleibt hier ein <h1>: Auf DIESER Seite ist die App die
+     Sache, um die es geht. In der Übersicht ist sie eine unter mehreren und
+     steht deshalb als <h2> unter dem Titel der Seite.
+
+     Die Rubrik führt zurück zur Übersicht. Ein eigener „Zurück"-Knopf wäre
+     ein zweiter Weg für dieselbe Sache — und der Name des Entwicklers steht
+     ohnehin schon da.
+     ==================================================================== -->
+<article class="app">
+  <header>
+    <div class="rubrik"><a href="./">SJR App Development</a></div>
+    <h1>Bürofauna</h1>
+    <p class="unterzeile">Der satirische Tracker für deine Meetings</p>
+  </header>
+
+  <img class="banner" src="bilder/banner.png" alt="Bürofauna" width="1024" height="500">
+
+  <p>Bürofauna misst, wie viel Arbeitszeit in Besprechungen und Telefonaten
+  steckt — und was sie taugt. Die Zeitmessung läuft weiter, auch wenn die App
+  geschlossen ist; bewertet wird jedes Gespräch auf einer fünfstufigen Skala.</p>
+
+  <p>45 Verhaltensmuster lassen sich bestimmen, und zwar über Fragen zum
+  beobachteten Verhalten statt über eine Namensliste. Zu jedem gehört eine
+  Einordnung, warum jemand so handelt, und konkrete Vorschläge, wie man damit
+  umgeht.</p>
+
+  <p>Die Auswertung zeigt nach Tag, Woche, Monat und über den gesamten
+  Bestand, wie viel Zeit in guten, neutralen und schlechten Gesprächen
+  liegt — mit Vergleich zur Vorperiode und Hochrechnung aufs Jahr. Alles
+  bleibt auf dem Gerät: kein Konto, keine Anmeldung, keine Cloud.</p>
+
+  <p>Die App läuft hoch wie quer; im Querformat rückt die Navigation an den
+  Rand und die Seiten stellen sich in Spalten. Wer es ruhiger mag, schaltet
+  die Animationen ab, und große Systemschriften macht die App mit, statt
+  Text abzuschneiden.</p>
+
+  <p>Diese Funktionen stecken in einem Bestimmungsbuch. Ein Gespräch ist eine
+  Expedition, die Bewertung ein Wetterbericht von sonnig bis Gewitter, ein
+  erkanntes Verhaltensmuster eine Sichtung — und die 45 Muster sind Arten mit
+  lateinischem Namen, Steckbrief, typischen Ruflauten und eigener Illustration
+  im Stil eines viktorianischen Naturkundebuchs. Wer eine Art zum ersten Mal
+  bestimmt, schaltet sie in seiner Sammlung frei. Das ist kein Selbstzweck:
+  Eine Strichliste über schlechte Meetings führt niemand lange, ein Sammelalbum
+  schon. Karikiert wird dabei ausschließlich Verhalten in Gesprächen — nie
+  Menschen.</p>
+
+  <!-- Karussell ohne Skript: waagerechtes Scrollen mit Einrastpunkten
+       (scroll-snap). Die Zahlen darunter sind gewoehnliche Sprungmarken —
+       damit laesst es sich auch mit der Maus bedienen, ohne dass die Seite
+       eine Zeile JavaScript braucht. -->
+  <div class="schuesse" role="group" aria-label="Bildschirmfotos">
+    <img id="s1" src="bilder/schuss-1.png" alt="Startbildschirm mit dem Kompass, der eine Expedition beginnt" width="380" height="836" loading="lazy">
+    <img id="s2" src="bilder/schuss-2.png" alt="Laufende Expedition: Wetterszene, Timer und die fünfstufige Skala mit vorläufiger Bewertung" width="380" height="836" loading="lazy">
+    <img id="s3" src="bilder/schuss-3.png" alt="Erste Frage der Bestimmung: In welchem Gesprächsformat tritt die Person auf?" width="380" height="836" loading="lazy">
+    <img id="s4" src="bilder/schuss-4.png" alt="Ergebnis der Bestimmung mit Illustration und lateinischem Namen der Art" width="380" height="836" loading="lazy">
+    <img id="s5" src="bilder/schuss-5.png" alt="Die Sammlung: freigeschaltete Arten neben noch verdeckten Silhouetten" width="380" height="836" loading="lazy">
+    <img id="s6" src="bilder/schuss-6.png" alt="Artseite mit Steckbrief, Ruflauten und Umgangsstrategien" width="380" height="836" loading="lazy">
+    <img id="s7" src="bilder/schuss-7.png" alt="Wetterbericht im Logbuch mit Wochendiagramm und Kennzahlen" width="380" height="836" loading="lazy">
+    <img id="s8" src="bilder/schuss-8.png" alt="Erweiterte Statistik: Gesprächsqualität nach Art, mit Verteilung je Art" width="380" height="836" loading="lazy">
+  </div>
+
+  <nav class="punkte" aria-label="Bildschirmfotos durchblättern">
+    <a href="#s1">1</a><a href="#s2">2</a><a href="#s3">3</a><a href="#s4">4</a><a href="#s5">5</a><a href="#s6">6</a><a href="#s7">7</a><a href="#s8">8</a>
+  </nav>
+
+  <!-- Die offiziellen Badges beider Stores, unveraendert und selbst gehostet.
+       Sie stehen NEBENEINANDER und deshalb in einer eigenen Liste: Der
+       Datenschutz-Link darunter ist etwas anderes und bleibt eine Zeile.
+       width/height sind die Maße der DATEIEN; die Anzeigehoehe steht im CSS,
+       und sie ist je Badge eine andere, weil die Dateien verschieden viel
+       Rand mitbringen. Gleich hoch sind die sichtbaren Badges. -->
+  <ul class="stores" aria-label="Bürofauna herunterladen">
+    <li><a href="https://play.google.com/store/apps/details?id=de.sjrappdevelopment.buerofauna"><img class="badge badge-play" src="bilder/google-play.png" alt="Jetzt bei Google Play" width="646" height="250"></a></li>
+    <li><a href="https://www.amazon.de/dp/B0HHBZFDSG"><img class="badge badge-amazon" src="bilder/amazon-appstore.png" alt="Erhältlich bei Amazon Appstore" width="572" height="168"></a></li>
+  </ul>
+
+  <ul class="links">
+    <li><a href="https://tyndor.github.io/buerofauna-legal/datenschutz.html">Datenschutzerklärung der App</a></li>
+  </ul>
+</article>
+
+<footer>
+  <nav>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz dieser Seite</a>
+  </nav>
+</footer>
+
+</main>
+</body>
+</html>
