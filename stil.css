@@ -1,11 +1,71 @@
-/* Schlichtes Papier-Layout, passend zum Feldführer-Ton der App.
-   Keine externen Schriften und keine Skripte — die Seite lädt nichts nach. */
+/* DREI ANZÜGE IN EINER DATEI.
+   Keine externen Schriften und keine Skripte — die Seite lädt nichts nach.
+
+   `:root` trägt den Hausstil von SJR App Development: zurückhaltend, damit
+   die Apps darin sprechen können. Jede App hat ihren eigenen Anzug als
+   Klasse, und beide übersteuern DIESELBEN Variablen — kein zweites Regelwerk,
+   nur andere Werte.
+
+   **Wo die Klasse hängt, entscheidet, wie weit der Anzug reicht**
+   (Nutzer-Wunsch 2026-09-22):
+
+     Seite einer App   <body class="thema-buerofauna">   alles trägt ihn
+     Übersicht         <article class="app thema-…">     nur ihr Block
+
+   Die Werte sind nicht erfunden, sondern die der Apps: Bürofauna aus dem
+   Feldführer-Zuschnitt (`lib/core/theme/`), Stapelhaus aus seinem Material-3-
+   Thema. Dieselben Zahlen stehen auf den beiden Rechtstext-Seiten
+   (`buerofauna-legal`, `stapelhaus-legal`); verbunden sind sie nur durch
+   diesen Satz. Wer dort etwas ändert, ändert es hier mit. */
 :root {
+  --paper: #ffffff;
+  --karte: #faf8f5;
+  --ink: #23211f;
+  --ink-muted: #5f5b55;
+  --rule: #e2ded6;
+  --seal: #3c5a6e;
+  --schrift: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --schrift-marke: ui-monospace, "Courier New", monospace;
+  --titel-gewicht: 600;
+  --rund: 10px;
+  --satz: left;
+}
+
+/* --- Bürofauna: viktorianischer Feldführer ------------------------------
+   Cremefarbenes Papier, Tinte, Siegelrot, Antiqua — und Blocksatz, weil die
+   Seite eine Buchseite sein will. */
+.thema-buerofauna {
   --paper: #f7f2e4;
+  --karte: #efe7d3;
   --ink: #2b241c;
   --ink-muted: #5d5344;
   --rule: #d6c9ae;
   --seal: #8c3b2e;
+  --schrift: Georgia, "Times New Roman", serif;
+  --schrift-marke: ui-monospace, "Courier New", monospace;
+  --titel-gewicht: 700;
+  --rund: 10px;
+  --satz: justify;
+}
+
+/* --- Stapelhaus: weiche Bauklötze, Material 3 in Pastell ----------------
+   Nunito steht vorn: Wer sie auf dem Gerät hat, sieht das Schriftbild der
+   App. Alle anderen bekommen eine verwandte runde Schrift — nachgeladen wird
+   keine. Kein Blocksatz: Die App setzt linksbündig. */
+.thema-stapelhaus {
+  --paper: #fff8f0;
+  --karte: #ffffff;
+  --ink: #2d2a32;
+  --ink-muted: #6e6975;
+  --rule: rgba(45, 42, 50, 0.12);
+  --seal: #ff7a59;
+  --schrift: Nunito, "Nunito Sans", "Trebuchet MS", "Segoe UI", system-ui,
+    -apple-system, sans-serif;
+  --schrift-marke: Nunito, "Nunito Sans", "Trebuchet MS", "Segoe UI",
+    system-ui, sans-serif;
+  --titel-gewicht: 800;
+  --rund: 16px;
+  --satz: left;
 }
 
 * { box-sizing: border-box; }
@@ -15,15 +75,17 @@ body {
   padding: 32px 20px 64px;
   background: var(--paper);
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--schrift);
   font-size: 17px;
   line-height: 1.65;
 }
 
-/* Blocksatz mit Silbentrennung. Ohne die Trennung riss der schmale Satzspiegel
-   auf dem Telefon Loecher zwischen die Woerter. */
+/* Blocksatz mit Silbentrennung — aber nur, wo der Anzug ihn vorsieht. Ohne
+   die Trennung riss der schmale Satzspiegel auf dem Telefon Loecher zwischen
+   die Woerter; mit Blocksatz in einer runden Grotesk saehe Stapelhaus dagegen
+   aus wie eine Zeitungsspalte. */
 p {
-  text-align: justify;
+  text-align: var(--satz);
   hyphens: auto;
   -webkit-hyphens: auto;
 }
@@ -35,36 +97,38 @@ main { max-width: 44rem; margin: 0 auto; }
 header { border-bottom: 1px solid var(--rule); padding-bottom: 14px; margin-bottom: 28px; }
 
 .rubrik {
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: var(--schrift-marke);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
 
-h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 0; }
-h2 { font-size: 20px; margin: 34px 0 10px; }
+/* Das Gewicht gehört zum Anzug: Die Antiqua des Feldführers trägt 700,
+   Stapelhaus' runde Grotesk 800 — so steht es in beiden Apps. */
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 0; font-weight: var(--titel-gewicht); }
+h2 { font-size: 20px; margin: 34px 0 10px; font-weight: var(--titel-gewicht); }
 
 a { color: var(--seal); }
 
 address {
   font-style: normal;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: var(--schrift-marke);
   font-size: 15px;
-  background: #efe7d3;
+  background: var(--karte);
   border: 1px solid var(--rule);
-  border-radius: 8px;
+  border-radius: var(--rund);
   padding: 14px 16px;
   white-space: pre-line;
 }
 
 .platzhalter {
-  background: #f6e2b8;
+  background: var(--karte);
   border-bottom: 2px dotted var(--seal);
   padding: 0 3px;
 }
 
-.stand { font-family: ui-monospace, "Courier New", monospace; font-size: 13px; color: var(--ink-muted); }
+.stand { font-family: var(--schrift-marke); font-size: 13px; color: var(--ink-muted); }
 
 footer {
   margin-top: 48px;
@@ -76,10 +140,36 @@ footer {
 
 nav a { margin-right: 18px; }
 
+/* Nachts hat jeder Anzug seine eigene Dunkelheit: Der Feldführer wird zu
+   dunklem Papier mit heller Tinte, Stapelhaus zu dem Grau seiner App. Ein
+   gemeinsamer Dunkelmodus hiesse, zwei Marken dieselbe Nacht zu geben. */
 @media (prefers-color-scheme: dark) {
-  :root { --paper: #191510; --ink: #ece3d2; --ink-muted: #b3a894; --rule: #4a4132; --seal: #d98878; }
-  address { background: #221c15; }
-  .platzhalter { background: #4a3a18; }
+  :root {
+    --paper: #17161a;
+    --karte: #232228;
+    --ink: #ece9e4;
+    --ink-muted: #a7a29b;
+    --rule: #38363d;
+    --seal: #8fb6cc;
+  }
+
+  .thema-buerofauna {
+    --paper: #191510;
+    --karte: #221c15;
+    --ink: #ece3d2;
+    --ink-muted: #b3a894;
+    --rule: #4a4132;
+    --seal: #d98878;
+  }
+
+  .thema-stapelhaus {
+    --paper: #1f1d24;
+    --karte: #2a2731;
+    --ink: #f2efea;
+    --ink-muted: #a9a4b0;
+    --rule: rgba(242, 239, 234, 0.12);
+    --seal: #ff7a59;
+  }
 }
 
 /* --- Übersicht der Apps -------------------------------------------------
@@ -95,6 +185,26 @@ nav a { margin-right: 18px; }
 }
 
 .app:first-of-type { border-top: none; }
+
+/* **In der Übersicht ist jeder Block eine Karte in den Farben SEINER App**
+   (Nutzer-Wunsch 2026-09-22). Er bringt seinen eigenen Grund mit, seine
+   Schrift, seine Rundung — und die Trennlinie zwischen den Blöcken entfällt:
+   Wo zwei Karten stehen, trennt die Kante schon.
+
+   Die Werte holt er sich aus der Themenklasse an ihm selbst; diese Regel
+   nennt nur, WELCHE Eigenschaften er überhaupt selbst setzt. Ohne sie bliebe
+   er beim Hausstil der Seite, denn den hat `body` schon angewandt. */
+.uebersicht .app {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid var(--rule);
+  border-radius: var(--rund);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--schrift);
+}
+
+.uebersicht .app:first-of-type { border: 1px solid var(--rule); }
 
 .banner {
   display: block;
@@ -116,7 +226,7 @@ nav a { margin-right: 18px; }
 
 .unterzeile {
   margin: 0;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: var(--schrift-marke);
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -166,7 +276,7 @@ nav a { margin-right: 18px; }
   min-height: 30px;
   border: 1px solid var(--rule);
   border-radius: 999px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: var(--schrift-marke);
   font-size: 13px;
   text-decoration: none;
   color: var(--ink-muted);
@@ -219,7 +329,7 @@ nav a { margin-right: 18px; }
 .badge-amazon { height: 40px; }
 
 .bald {
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: var(--schrift-marke);
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;

@@ -29,6 +29,23 @@ Zweck:
   Crawler sie nicht. Die Datei gilt für alle Apps, deren Store-Eintrag auf
   diese Website zeigt; sie nennt Anzeigenquellen, keine Apps.
 
+## Drei Anzüge
+
+`stil.css` trägt den Hausstil in `:root` und je App eine Klasse, die
+DIESELBEN Variablen übersteuert — kein zweites Regelwerk, nur andere Werte.
+Wo die Klasse hängt, entscheidet, wie weit der Anzug reicht:
+
+| Seite | Klasse an | Wirkung |
+|---|---|---|
+| `buerofauna.html`, `stapelhaus.html` | `<body>` | die ganze Seite im Look der App |
+| `index.html` | `<article class="app …">` | nur ihr Block; der Rahmen bleibt Hausstil |
+| `impressum.html`, `datenschutz.html` | nichts | Hausstil — sie gehören dem Entwickler, nicht einer App |
+
+Die Werte stammen aus den Apps selbst (Farben, Schrift, Rundung, Gewicht der
+Überschriften) und stehen genauso auf den beiden Rechtstext-Seiten. Verbunden
+sind die drei Orte nur durch diesen Satz: Wer eine Farbe in der App ändert,
+ändert sie hier mit.
+
 Keine Build-Schritte, keine Abhängigkeiten: reines HTML und eine CSS-Datei.
 Die Bilder unter `bilder/` sind herunterskalierte Fassungen aus dem
 App-Repository (`store/screenshots/`, `store/feature-grafik-1024x500.png`).

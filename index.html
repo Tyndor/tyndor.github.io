@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <link rel="stylesheet" href="stil.css">
 </head>
-<body>
+<body class="uebersicht">
 <main>
 
 <!-- ====================================================================
@@ -24,13 +24,19 @@
 
      Die Seite trägt jetzt selbst den <h1>; die Apps darunter sind <h2>. Zwei
      <h1> auf einer Seite wären für Vorleseprogramme irreführend.
+
+     **Jeder Block trägt den Anzug SEINER App** (Nutzer-Wunsch 2026-09-22):
+     `thema-buerofauna` beziehungsweise `thema-stapelhaus` am <article>. Der
+     Rahmen darum — Kopf, Fuß, Grund — bleibt im Hausstil, sonst gewönne eine
+     der beiden Apps die Seite für sich. Die Klassen stehen in `stil.css`; sie
+     übersteuern nur Variablen, nicht Regeln.
      ==================================================================== -->
 <header>
   <div class="rubrik">SJR App Development</div>
   <h1>Apps</h1>
 </header>
 
-<article class="app">
+<article class="app thema-buerofauna">
   <h2>Bürofauna</h2>
   <p class="unterzeile">Der satirische Tracker für deine Meetings</p>
 
@@ -54,7 +60,7 @@
      Marke „In Arbeit" und keinen Store-Verweis — ein Abzeichen führte ins
      Leere. Steht sie erst in den Stores, wird aus der Marke ein Paar
      Abzeichen, hier wie auf ihrer eigenen Seite. -->
-<article class="app">
+<article class="app thema-stapelhaus">
   <h2>Stapelhaus</h2>
   <p class="unterzeile">Wer wohnt wo? Dein Haus auf einen Blick</p>
 
