@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Die Seiten, die gefunden werden sollen.
+
+  NICHT darin stehen impressum.html und datenschutz.html: Beide tragen
+  "noindex". Eine Sitemap ist eine Empfehlung zum Indexieren; stünden sie
+  hier, widerspräche die Datei der Seite selbst, und Google meldete in der
+  Search Console "Durch 'noindex' ausgeschlossene Seite in Sitemap". Aus
+  demselben Grund fehlen die Rechtstexte unter /buerofauna-legal/ und
+  /stapelhaus-legal/ (eigene Repos, ebenfalls noindex).
+
+  KEIN changefreq und KEIN priority: Google wertet beides seit Jahren nicht
+  aus. Zwei Angaben, die niemand liest, veralten nur still.
+
+  lastmod ist der Tag der letzten INHALTLICHEN Änderung, nicht der letzte
+  Commit. Der Nachweis für die Search Console (0a70109) hat index.html zwar
+  angefasst, am Inhalt aber nichts geändert; für Google wäre das ein
+  falsches Signal. Maßgeblich ist 14b26f2, das den Apps ihren eigenen
+  Anzug gab.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://tyndor.github.io/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/buerofauna.html</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/stapelhaus.html</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+
+</urlset>

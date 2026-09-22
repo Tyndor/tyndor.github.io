@@ -23,3 +23,8 @@ Disallow: /
 
 User-agent: ClaudeBot
 Disallow: /
+
+# Die Sitemap gehoert an den Schluss und in KEINE der Gruppen darueber: Die
+# Zeile gilt fuer die ganze Datei, nicht fuer den zuletzt genannten Bot.
+# Ueber sie finden Suchmaschinen die Liste auch ohne Search Console.
+Sitemap: https://tyndor.github.io/sitemap.xml
