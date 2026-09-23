@@ -20,19 +20,28 @@
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Seit dem 2026-09-23 stehen hier die Adressen unter /de/, nicht mehr die
+       flachen. Eine Sitemap nennt ausschliesslich KANONISCHE Adressen; die
+       alten tragen "canonical" auf genau diese hier. Stuenden beide darin,
+       wuerde die Datei Google auffordern, zwischen zwei Fassungen desselben
+       Textes zu waehlen — und genau das soll canonical verhindern.
+
+       Die Seiten unter /en/ fehlen absichtlich: Dort steht bis zur
+       Uebersetzung noch der deutsche Text, und sie tragen "noindex". -->
+
   <url>
-    <loc>https://tyndor.github.io/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://tyndor.github.io/de/</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
 
   <url>
-    <loc>https://tyndor.github.io/buerofauna.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://tyndor.github.io/de/buerofauna.html</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
 
   <url>
-    <loc>https://tyndor.github.io/stapelhaus.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://tyndor.github.io/de/stapelhaus.html</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
 
 </urlset>
