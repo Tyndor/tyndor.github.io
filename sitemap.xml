@@ -15,8 +15,9 @@
   lastmod ist der Tag der letzten INHALTLICHEN Änderung, nicht der letzte
   Commit. Der Nachweis für die Search Console (0a70109) hat index.html zwar
   angefasst, am Inhalt aber nichts geändert; für Google wäre das ein
-  falsches Signal. Maßgeblich ist 14b26f2, das den Apps ihren eigenen
-  Anzug gab.
+  falsches Signal. Stand 2026-09-26: Alle drei Seiten tragen seitdem den
+  Sprachumschalter (a597ed2), die Seite von Bürofauna dazu den
+  App-Store-Badge (e2b0c94).
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -31,17 +32,17 @@
 
   <url>
     <loc>https://tyndor.github.io/de/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-26</lastmod>
   </url>
 
   <url>
     <loc>https://tyndor.github.io/de/buerofauna.html</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-26</lastmod>
   </url>
 
   <url>
     <loc>https://tyndor.github.io/de/stapelhaus.html</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-26</lastmod>
   </url>
 
 </urlset>
