@@ -327,6 +327,9 @@ nav a { margin-right: 18px; }
 .badge { display: block; width: auto; margin: 10px; }
 .badge-play { height: 52px; }
 .badge-amazon { height: 40px; }
+/* Apples Badge (SVG) fuellt seine Flaeche ohne Rand, wie der von Amazon;
+   40 px sind zugleich Apples Mindesthoehe fuer einen Badge am Bildschirm. */
+.badge-apple { height: 40px; }
 
 .bald {
   font-family: var(--schrift-marke);
