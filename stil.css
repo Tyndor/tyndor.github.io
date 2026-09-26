@@ -342,3 +342,15 @@ nav a { margin-right: 18px; }
   padding: 3px 12px;
   display: inline-block;
 }
+
+/* Sprachumschalter oben rechts im Kopf jeder Seite (2026-09-26). In der
+   Schrift der Rubrik, damit er zur Zeile daneben gehoert; die aktuelle
+   Sprache ist kein Link, sondern hervorgehoben. */
+.sprachen {
+  float: right;
+  font-family: var(--schrift-marke);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+.sprachen [aria-current] { color: var(--ink); font-weight: 600; }
