@@ -12,11 +12,20 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <link rel="stylesheet" href="stil.css">
-<!-- Uebergangsphase: Diese Adresse bleibt erreichbar, bis die Store-Konsolen
-     auf die neue Struktur umgestellt sind. Fuer die SUCHE gilt ab sofort die
-     Fassung unter /de/ -- canonical ist ein Hinweis, keine Weiterleitung.
-     Wer hier landet, sieht die Seite unveraendert; ihre Verweise fuehren
-     seit dem 2026-09-26 aber schon auf die Seiten unter /de/. -->
+<!-- DIE STARTSEITE BLEIBT DAUERHAFT (Nutzer-Entscheidung 2026-09-28). Sie ist
+     keine Sprachwahl, sondern zeigt die Übersicht der STANDARDSPRACHE, heute
+     die deutsche: eine Kopie von de/index.html, nur mit relativen Pfaden im
+     Kopf und der Zeile für die Search Console. Ihre Verweise führen auf die
+     Seiten unter /de/.
+
+     canonical zeigt deshalb auf /de/: Für die Suche gilt die Fassung dort,
+     und diese Adresse steht NICHT in der Sitemap. canonical ist ein Hinweis,
+     keine Weiterleitung; wer hier landet, sieht die Seite trotzdem.
+
+     Wird später Englisch der Standard: den Inhalt von en/index.html
+     übernehmen (lang="en", relative Pfade im Kopf), canonical auf /en/
+     setzen und die Zeile der Search Console behalten. Die Sitemap bleibt,
+     wie sie ist; sie führt /de/ und /en/ ohnehin. -->
 <link rel="canonical" href="https://tyndor.github.io/de/">
 </head>
 <body class="uebersicht">
