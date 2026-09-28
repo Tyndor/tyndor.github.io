@@ -2,12 +2,13 @@
 <!--
   Die Seiten, die gefunden werden sollen.
 
-  NICHT darin stehen impressum.html und datenschutz.html: Beide tragen
-  "noindex". Eine Sitemap ist eine Empfehlung zum Indexieren; stünden sie
-  hier, widerspräche die Datei der Seite selbst, und Google meldete in der
-  Search Console "Durch 'noindex' ausgeschlossene Seite in Sitemap". Aus
-  demselben Grund fehlen die Rechtstexte unter /buerofauna-legal/ und
-  /stapelhaus-legal/ (eigene Repos, ebenfalls noindex).
+  NICHT darin stehen impressum.html und datenschutz.html, in keiner Sprache:
+  Sie tragen "noindex". Eine Sitemap ist eine Empfehlung zum Indexieren;
+  stünden sie hier, widerspräche die Datei der Seite selbst, und Google
+  meldete in der Search Console "Durch 'noindex' ausgeschlossene Seite in
+  Sitemap". Aus demselben Grund fehlen die Rechtstexte unter
+  /buerofauna-legal/ und /stapelhaus-legal/ (eigene Repos, ebenfalls
+  noindex).
 
   KEIN changefreq und KEIN priority: Google wertet beides seit Jahren nicht
   aus. Zwei Angaben, die niemand liest, veralten nur still.
@@ -15,9 +16,9 @@
   lastmod ist der Tag der letzten INHALTLICHEN Änderung, nicht der letzte
   Commit. Der Nachweis für die Search Console (0a70109) hat index.html zwar
   angefasst, am Inhalt aber nichts geändert; für Google wäre das ein
-  falsches Signal. Stand 2026-09-26: Alle drei Seiten tragen seitdem den
-  Sprachumschalter (a597ed2), die Seite von Bürofauna dazu den
-  App-Store-Badge (e2b0c94).
+  falsches Signal. Stand 2026-09-28: Übersicht und Seite von Bürofauna
+  deutsch auf Stand 1.4 (27.09.), die englischen Seiten übersetzt (Bürofauna
+  27.09., Übersicht und Stapelhaus 28.09.).
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -25,24 +26,39 @@
        flachen. Eine Sitemap nennt ausschliesslich KANONISCHE Adressen; die
        alten tragen "canonical" auf genau diese hier. Stuenden beide darin,
        wuerde die Datei Google auffordern, zwischen zwei Fassungen desselben
-       Textes zu waehlen — und genau das soll canonical verhindern.
+       Textes zu waehlen, und genau das soll canonical verhindern.
 
-       Die Seiten unter /en/ fehlen absichtlich: Dort steht bis zur
-       Uebersetzung noch der deutsche Text, und sie tragen "noindex". -->
+       Seit dem 2026-09-28 stehen die Seiten unter /en/ dabei: Sie sind
+       uebersetzt, tragen kein "noindex" mehr und ihr eigenes canonical. -->
 
   <url>
     <loc>https://tyndor.github.io/de/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-09-27</lastmod>
   </url>
 
   <url>
     <loc>https://tyndor.github.io/de/buerofauna.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-09-27</lastmod>
   </url>
 
   <url>
     <loc>https://tyndor.github.io/de/stapelhaus.html</loc>
     <lastmod>2026-09-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/en/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/en/buerofauna.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/en/stapelhaus.html</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
 
 </urlset>
