@@ -28,4 +28,3 @@ Disallow: /
 # Zeile gilt fuer die ganze Datei, nicht fuer den zuletzt genannten Bot.
 # Ueber sie finden Suchmaschinen die Liste auch ohne Search Console.
 Sitemap: https://tyndor.github.io/sitemap.xml
-Sitemap: https://tyndor.github.io/de/sitemap.xml

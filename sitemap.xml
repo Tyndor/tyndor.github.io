@@ -22,27 +22,32 @@
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Seit dem 2026-09-23 stehen hier die Adressen unter /de/, nicht mehr die
-       flachen. Eine Sitemap nennt ausschliesslich KANONISCHE Adressen; die
-       alten tragen "canonical" auf genau diese hier. Stuenden beide darin,
-       wuerde die Datei Google auffordern, zwischen zwei Fassungen desselben
-       Textes zu waehlen, und genau das soll canonical verhindern.
+  <!-- Seit dem 2026-10-08 stehen hier wieder die deutschen Adressen an der
+       WURZEL (Nutzer-Entscheidung): Sie sind die Originale, die Kopien unter
+       /de/ tragen "canonical" auf sie. Vom 2026-09-23 bis dahin war es
+       umgekehrt; Google hat die Wurzel trotzdem als kanonisch gewaehlt. Eine
+       Sitemap nennt ausschliesslich KANONISCHE Adressen. Stuenden beide
+       darin, wuerde die Datei Google auffordern, zwischen zwei Fassungen
+       desselben Textes zu waehlen, und genau das soll canonical verhindern.
+
+       Eine eigene Sitemap unter /de/ gibt es deshalb nicht mehr: Sie duerfte
+       nur Adressen unter /de/ nennen, und die sind nicht kanonisch.
 
        Seit dem 2026-09-28 stehen die Seiten unter /en/ dabei: Sie sind
        uebersetzt, tragen kein "noindex" mehr und ihr eigenes canonical. -->
 
   <url>
-    <loc>https://tyndor.github.io/de/</loc>
+    <loc>https://tyndor.github.io/</loc>
     <lastmod>2026-09-27</lastmod>
   </url>
 
   <url>
-    <loc>https://tyndor.github.io/de/buerofauna.html</loc>
+    <loc>https://tyndor.github.io/buerofauna.html</loc>
     <lastmod>2026-09-27</lastmod>
   </url>
 
   <url>
-    <loc>https://tyndor.github.io/de/stapelhaus.html</loc>
+    <loc>https://tyndor.github.io/stapelhaus.html</loc>
     <lastmod>2026-09-26</lastmod>
   </url>
 
