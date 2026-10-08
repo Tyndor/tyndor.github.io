@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Die deutschen Seiten — dieselben drei Einträge wie in /sitemap.xml.
+
+  Eine Sitemap darf nur Adressen UNTERHALB ihres eigenen Ordners nennen
+  (sitemaps.org, "Sitemap file location"). Diese hier liegt unter /de/ und
+  führt deshalb ausschliesslich /de/; die englischen Seiten stehen nur in
+  der Sitemap an der Wurzel. Wer eine Seite ändert, zieht lastmod in BEIDEN
+  Dateien nach.
+
+  Es gelten dieselben Regeln wie dort: keine Rechtstexte (noindex), kein
+  changefreq, kein priority, lastmod ist der Tag der letzten INHALTLICHEN
+  Änderung.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://tyndor.github.io/de/</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/de/buerofauna.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://tyndor.github.io/de/stapelhaus.html</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+
+</urlset>
