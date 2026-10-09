@@ -9,11 +9,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <link rel="stylesheet" href="/stil.css">
 <link rel="canonical" href="https://tyndor.github.io/en/">
-<!-- Die Sprachfassungen der Startseite (2026-10-08). Jede Startseite nennt
-     alle, sich selbst eingeschlossen: hreflang zählt nur, wenn die Angaben
-     gegenseitig sind. de und x-default zeigen beide auf die Wurzel: Dort
-     steht seit dem 2026-10-08 die deutsche Fassung, und sie ist zugleich
-     die Standardsprache. -->
 <link rel="alternate" hreflang="de" href="https://tyndor.github.io/">
 <link rel="alternate" hreflang="en" href="https://tyndor.github.io/en/">
 <link rel="alternate" hreflang="x-default" href="https://tyndor.github.io/">
@@ -21,25 +16,6 @@
 <body class="uebersicht">
 <main>
 
-<!-- ====================================================================
-     DIE ÜBERSICHT. Bis zum 2026-09-21 stand hier die ganze Seite von
-     Bürofauna; seither steht hier je App ein kurzer Block, und die
-     Einzelheiten stehen auf ihrer eigenen Seite (Nutzer-Wunsch).
-
-     Ein Block ist: Überschrift, Unterzeile, Banner, EIN Absatz, ein Verweis.
-     Mehr nicht — wer mehr wissen will, tippt auf den Verweis. Für eine
-     weitere App diesen <article> kopieren und `buerofauna.html` als Vorlage
-     für ihre Seite nehmen.
-
-     Die Seite trägt jetzt selbst den <h1>; die Apps darunter sind <h2>. Zwei
-     <h1> auf einer Seite wären für Vorleseprogramme irreführend.
-
-     **Jeder Block trägt den Anzug SEINER App** (Nutzer-Wunsch 2026-09-22):
-     `thema-buerofauna` beziehungsweise `thema-stapelhaus` am <article>. Der
-     Rahmen darum — Kopf, Fuß, Grund — bleibt im Hausstil, sonst gewönne eine
-     der beiden Apps die Seite für sich. Die Klassen stehen in `stil.css`; sie
-     übersteuern nur Variablen, nicht Regeln.
-     ==================================================================== -->
 <header>
   <nav class="sprachen" aria-label="Language"><a href="/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true" lang="en">English</span></nav>
   <div class="rubrik">SJR App Development</div>
@@ -50,9 +26,6 @@
   <h2>Office Fauna</h2>
   <p class="unterzeile">The satirical tracker for your meetings</p>
 
-  <!-- Das Banner führt dorthin, wohin auch der Verweis darunter führt: Ein
-       Bild dieser Größe sieht aus wie eine Schaltfläche, und wer darauf
-       tippt, erwartet, dass etwas passiert. -->
   <a class="banner-link" href="/en/buerofauna.html"><img class="banner" src="/bilder/banner.png" alt="Office Fauna" width="1024" height="500"></a>
 
   <p>Office Fauna measures how much of your working time goes into meetings
@@ -68,10 +41,6 @@
   </ul>
 </article>
 
-<!-- Die zweite App. Sie ist NOCH NICHT veröffentlicht, deshalb trägt sie die
-     Marke „In Arbeit" und keinen Store-Verweis — ein Abzeichen führte ins
-     Leere. Steht sie erst in den Stores, wird aus der Marke ein Paar
-     Abzeichen, hier wie auf ihrer eigenen Seite. -->
 <article class="app thema-stapelhaus">
   <h2>Stapelhaus</h2>
   <p class="unterzeile">Who lives where? Your building at a glance</p>

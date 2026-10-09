@@ -1,40 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Die Seiten, die gefunden werden sollen.
-
-  NICHT darin stehen impressum.html und datenschutz.html, in keiner Sprache:
-  Sie tragen "noindex". Eine Sitemap ist eine Empfehlung zum Indexieren;
-  stünden sie hier, widerspräche die Datei der Seite selbst, und Google
-  meldete in der Search Console "Durch 'noindex' ausgeschlossene Seite in
-  Sitemap". Aus demselben Grund fehlen die Rechtstexte unter
-  /buerofauna-legal/ und /stapelhaus-legal/ (eigene Repos, ebenfalls
-  noindex).
-
-  KEIN changefreq und KEIN priority: Google wertet beides seit Jahren nicht
-  aus. Zwei Angaben, die niemand liest, veralten nur still.
-
-  lastmod ist der Tag der letzten INHALTLICHEN Änderung, nicht der letzte
-  Commit. Der Nachweis für die Search Console (0a70109) hat index.html zwar
-  angefasst, am Inhalt aber nichts geändert; für Google wäre das ein
-  falsches Signal. Stand 2026-09-28: Übersicht und Seite von Bürofauna
-  deutsch auf Stand 1.4 (27.09.), die englischen Seiten übersetzt (Bürofauna
-  27.09., Übersicht und Stapelhaus 28.09.).
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Seit dem 2026-10-08 stehen hier wieder die deutschen Adressen an der
-       WURZEL (Nutzer-Entscheidung): Sie sind die Originale, die Kopien unter
-       /de/ tragen "canonical" auf sie. Vom 2026-09-23 bis dahin war es
-       umgekehrt; Google hat die Wurzel trotzdem als kanonisch gewaehlt. Eine
-       Sitemap nennt ausschliesslich KANONISCHE Adressen. Stuenden beide
-       darin, wuerde die Datei Google auffordern, zwischen zwei Fassungen
-       desselben Textes zu waehlen, und genau das soll canonical verhindern.
-
-       Eine eigene Sitemap unter /de/ gibt es deshalb nicht mehr: Sie duerfte
-       nur Adressen unter /de/ nennen, und die sind nicht kanonisch.
-
-       Seit dem 2026-09-28 stehen die Seiten unter /en/ dabei: Sie sind
-       uebersetzt, tragen kein "noindex" mehr und ihr eigenes canonical. -->
 
   <url>
     <loc>https://tyndor.github.io/</loc>

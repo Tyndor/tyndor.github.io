@@ -9,41 +9,13 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <link rel="stylesheet" href="/stil.css">
 <link rel="canonical" href="https://tyndor.github.io/">
-<!-- Die Sprachfassungen der Startseite (2026-10-08). Jede Startseite nennt
-     alle, sich selbst eingeschlossen: hreflang zählt nur, wenn die Angaben
-     gegenseitig sind. de und x-default zeigen beide auf die Wurzel: Dort
-     steht seit dem 2026-10-08 die deutsche Fassung, und sie ist zugleich
-     die Standardsprache. -->
 <link rel="alternate" hreflang="de" href="https://tyndor.github.io/">
 <link rel="alternate" hreflang="en" href="https://tyndor.github.io/en/">
 <link rel="alternate" hreflang="x-default" href="https://tyndor.github.io/">
-<!-- KOPIE der Seite an der Wurzel (seit dem 2026-10-08). Kanonisch ist
-     die Fassung dort; diese Adresse bleibt nur erreichbar, damit
-     bestehende Verweise nicht ins Leere führen. Geändert wird an der
-     Wurzel, hier wird nachgezogen. -->
 </head>
 <body class="uebersicht">
 <main>
 
-<!-- ====================================================================
-     DIE ÜBERSICHT. Bis zum 2026-09-21 stand hier die ganze Seite von
-     Bürofauna; seither steht hier je App ein kurzer Block, und die
-     Einzelheiten stehen auf ihrer eigenen Seite (Nutzer-Wunsch).
-
-     Ein Block ist: Überschrift, Unterzeile, Banner, EIN Absatz, ein Verweis.
-     Mehr nicht — wer mehr wissen will, tippt auf den Verweis. Für eine
-     weitere App diesen <article> kopieren und `buerofauna.html` als Vorlage
-     für ihre Seite nehmen.
-
-     Die Seite trägt jetzt selbst den <h1>; die Apps darunter sind <h2>. Zwei
-     <h1> auf einer Seite wären für Vorleseprogramme irreführend.
-
-     **Jeder Block trägt den Anzug SEINER App** (Nutzer-Wunsch 2026-09-22):
-     `thema-buerofauna` beziehungsweise `thema-stapelhaus` am <article>. Der
-     Rahmen darum — Kopf, Fuß, Grund — bleibt im Hausstil, sonst gewönne eine
-     der beiden Apps die Seite für sich. Die Klassen stehen in `stil.css`; sie
-     übersteuern nur Variablen, nicht Regeln.
-     ==================================================================== -->
 <header>
   <nav class="sprachen" aria-label="Sprache"><span aria-current="true">Deutsch</span> · <a href="/en/" hreflang="en" lang="en">English</a></nav>
   <div class="rubrik">SJR App Development</div>
@@ -54,9 +26,6 @@
   <h2>Bürofauna</h2>
   <p class="unterzeile">Der satirische Tracker für deine Meetings</p>
 
-  <!-- Das Banner führt dorthin, wohin auch der Verweis darunter führt: Ein
-       Bild dieser Größe sieht aus wie eine Schaltfläche, und wer darauf
-       tippt, erwartet, dass etwas passiert. -->
   <a class="banner-link" href="/buerofauna.html"><img class="banner" src="/bilder/banner.png" alt="Bürofauna" width="1024" height="500"></a>
 
   <p>Bürofauna misst, wie viel Arbeitszeit in Besprechungen und Telefonaten
@@ -72,10 +41,6 @@
   </ul>
 </article>
 
-<!-- Die zweite App. Sie ist NOCH NICHT veröffentlicht, deshalb trägt sie die
-     Marke „In Arbeit" und keinen Store-Verweis — ein Abzeichen führte ins
-     Leere. Steht sie erst in den Stores, wird aus der Marke ein Paar
-     Abzeichen, hier wie auf ihrer eigenen Seite. -->
 <article class="app thema-stapelhaus">
   <h2>Stapelhaus</h2>
   <p class="unterzeile">Wer wohnt wo? Dein Haus auf einen Blick</p>
